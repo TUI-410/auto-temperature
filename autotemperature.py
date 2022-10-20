@@ -57,25 +57,25 @@ except Exception:
     print("验证码错误\n")
     time.sleep(1)
 
+try:
+    time.sleep(1)
+    driver.find_element(By.CSS_SELECTOR, "input[name='c1']").clear()
+    driver.find_element(By.CSS_SELECTOR, "input[name='c4']").clear()
+    time.sleep(1)
+    driver.find_element(By.CSS_SELECTOR, "input[name='c1']").send_keys("36.5")
+    driver.find_element(By.CSS_SELECTOR, "input[name='c4']").send_keys("36.5")
+    time.sleep(1)
+    driver.find_element(By.XPATH, '//*[@id="main"]/div[7]/label[2]').click()
+    time.sleep(1)
+    driver.find_element(By.ID, "save").click()
+    time.sleep(1)
+    b = "打卡成功"
+    driver.quit()
+except Exception:
+    b="打卡失败\n"
+    time.sleep(1)
 
-time.sleep(1)
-driver.find_element(By.CSS_SELECTOR, "input[name='c1']").clear()
-driver.find_element(By.CSS_SELECTOR, "input[name='c4']").clear()
-time.sleep(1)
-driver.find_element(By.CSS_SELECTOR, "input[name='c1']").send_keys("36.5")
-driver.find_element(By.CSS_SELECTOR, "input[name='c4']").send_keys("36.5")
-time.sleep(1)
-driver.find_element(By.XPATH, '//*[@id="main"]/div[7]/label[2]').click()
-time.sleep(1)
-driver.find_element(By.ID, "save").click()
-time.sleep(1)
-a="打卡成功"
-# print("打卡成功")
-driver.quit()
-
-print(a)
 file = open("mydata.html", 'w+', encoding='UTF-8')
-file.write(a)
+file.write(a+'*****'+b)
 file.close()
-
 
