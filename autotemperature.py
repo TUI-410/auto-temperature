@@ -57,6 +57,7 @@ except Exception:
     print("验证码错误\n")
     time.sleep(1)
 
+
 time.sleep(1)
 driver.find_element(By.CSS_SELECTOR, "input[name='c1']").clear()
 driver.find_element(By.CSS_SELECTOR, "input[name='c4']").clear()
@@ -68,8 +69,13 @@ driver.find_element(By.XPATH, '//*[@id="main"]/div[7]/label[2]').click()
 time.sleep(1)
 driver.find_element(By.ID, "save").click()
 time.sleep(1)
-print("打卡成功")
+a="打卡成功"
+# print("打卡成功")
 driver.quit()
 
+print(a)
+file = open("mydata.html", 'w+', encoding='UTF-8')
+file.write(a)
+file.close()
 
 
