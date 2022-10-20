@@ -5,14 +5,9 @@ from chaojiying import Chaojiying_Client
 from selenium.webdriver.common.by import By
 
 
-a, b, c, d, e, f, z = '', '', '', '', '', '', ''
+
 timetamp = time.mktime(time.localtime())
 timetamp = int(timetamp)
-y=''
-url = "http://xscfw.hebust.edu.cn/survey/ajaxLogin"
-url2 = "http://xscfw.hebust.edu.cn/survey/index"
-url3 = f"http://xscfw.hebust.edu.cn/survey/surveySave?timestamp={timetamp}"
-
 header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
 }
