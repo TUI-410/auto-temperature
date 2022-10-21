@@ -51,12 +51,11 @@ try:
     # 鼠标点击事件
     time.sleep(1)
     ActionChains(driver).click(driver.find_element(By.CSS_SELECTOR, 'li[class="mdui-list-item mdui-ripple"]')).perform()
-    print("登录成功")
+    a="登录成功"
 
 except Exception:
-    print("验证码错误\n")
+    a="验证码错误\n"
     time.sleep(1)
-
 try:
     time.sleep(1)
     driver.find_element(By.CSS_SELECTOR, "input[name='c1']").clear()
