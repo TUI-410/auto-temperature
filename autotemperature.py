@@ -73,8 +73,8 @@ try:
 except Exception:
     b="打卡失败\n"
     time.sleep(1)
-
-# file = open("mydata.html", 'w+', encoding='UTF-8')
-# file.write(a+'*****'+b)
-# file.close()
+    
+file = open("mydata.html", 'w+', encoding='UTF-8')
+file.write(a+'*****'+b)
+file.close()
 
