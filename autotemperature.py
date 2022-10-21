@@ -54,7 +54,7 @@ try:
     a="登录成功"
 
 except Exception:
-    a="验证码错误\n"
+    a="验证码错误"
     time.sleep(1)
 try:
     time.sleep(1)
@@ -71,7 +71,7 @@ try:
     b = "打卡成功"
     driver.quit()
 except Exception:
-    b="打卡失败\n"
+    b="打卡失败"
     time.sleep(1)
     
 file = open("mydata.html", 'w+', encoding='UTF-8')
